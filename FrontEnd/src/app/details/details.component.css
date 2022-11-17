@@ -1,0 +1,13 @@
+.content{
+    margin-top: 5%;
+    margin-left: 42%;
+}
+
+.mat-elevation-z4{
+    background-color: rgb(158, 114, 209);
+}
+
+body{
+    background-image: linear-gradient(rgba(94, 142, 206, 0.856), rgba(60, 76, 218, 0.5)),url("/assets/ecomm5.jfif");
+}
+

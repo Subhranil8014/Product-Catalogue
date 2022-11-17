@@ -1,0 +1,48 @@
+<body>
+<!-- <div class="bootstrap-wrapper">
+
+    <div class="container">
+        <h1 class="text-center" style="color: blue;">Welcome to Product Catalogue</h1>
+    </div>
+</div> -->
+<br>
+<form (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Search Product</mat-label>
+        <input [(ngModel)]="param.param" name="param"  matInput placeholder="Ex. Tshirt">
+      </mat-form-field><br>
+      <button type="submit" mat-flat-button color="accent">SEARCH</button>
+</form>
+<br><br>
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="20%" fxLayoutAlign=" stretch" *ngFor="let e of list;">
+<mat-card class="mat-elevation-z4">
+            <mat-card-header style="background-color: rgb(173, 190, 95);padding: 5px;">
+                <mat-card-title>{{e.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image class="image" src="{{e.image}}">
+            <mat-card-content>
+                <p style="font-size: large;font-style: italic;color: rgb(138, 5, 5); text-align: center;">
+                    {{e.brand}}
+                <!-- </p><p style="font-size: medium;text-align: center;">
+                 <b>  Price:{{e.price}}</b>
+                </p> -->
+            </mat-card-content>
+            <!-- <mat-card-actions class="text-center">
+                <button mat-button color="accent"><a href="/productDetails/?code={{e.code}}">View Details</a></button>
+            </mat-card-actions> -->
+        </mat-card>
+        </div>
+
+
+    </div>
+
+    <!-- <mat-radio-group aria-label="Select an option">
+        <mat-radio-button (click)="onClick()" value="1">Option 1</mat-radio-button>
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+      </mat-radio-group> -->
+    
+</div>
+
+</body>

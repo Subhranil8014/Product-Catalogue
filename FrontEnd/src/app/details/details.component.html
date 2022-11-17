@@ -1,0 +1,40 @@
+<body>
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+        <h1 class="text-center" style="color: rgb(15, 11, 1);">Product Details</h1>
+    </div>
+</div>
+
+<div class="content">
+    <div >
+        <div fxFlex="30%" *ngFor="let e of list;" >
+<mat-card class="mat-elevation-z4">
+            <mat-card-header >
+                <mat-card-title>{{e.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image class="image" src="{{e.image}}">
+            <mat-card-content>
+                <p style="font-size: large;font-style: italic;color: rgb(138, 5, 5);">
+                    {{e.brand}}
+                </p><p style="font-size: medium;text-align: center;">
+                 <b>  Price:{{e.price}}</b>
+                </p>
+                <p>{{e.description}}</p>
+            </mat-card-content>
+            
+            <mat-card-actions class="text-center">
+                <mat-form-field  appearance="outline">
+                    <mat-label>Pincode</mat-label>
+                    <input [(ngModel)]="pincode.pin" matInput placeholder="Ex. 123456" >
+                  </mat-form-field>
+                <button mat-stroked-button (click)="openSnackBar()" color="primary"><b>Check Availability</b></button>
+            </mat-card-actions>
+        </mat-card>
+        </div>
+
+
+    </div>
+    
+</div>
+</body>

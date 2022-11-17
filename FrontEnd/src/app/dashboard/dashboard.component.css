@@ -1,0 +1,19 @@
+form{
+    text-align: center;
+}
+
+body{
+    background-image: linear-gradient(rgba(238, 238, 241, 0.856), rgba(255, 255, 0, 0.5)),url("/assets/ecomm.jpg");
+    
+    
+}
+
+.mat-elevation-z4{
+    background-color: rgb(71, 184, 236);
+}
+
+.image{
+    height: 350px; 
+    width: 380px;
+    object-fit: contain;
+  }

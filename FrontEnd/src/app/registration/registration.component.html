@@ -1,0 +1,50 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+
+                <div style="margin-top: 40px;" class="container text-center">
+                    <img  src="/assets/download.png" alt="" class="img-fluid" style="width: 300px; height: 100px; ">
+                </div>
+<br><br>
+                <form (ngSubmit)="onSubmit()">
+                    <mat-form-field class="full-width">
+                        <mat-label>Email</mat-label>
+                        <input [(ngModel)]="data.emailId" type="email" name="email" matInput required  email="true"/>
+                    </mat-form-field><br><br><br>
+
+                    <mat-form-field class="full-width" >
+                        <mat-label>First Name</mat-label>
+                        <input [(ngModel)]="data.fName" type="text" name="fname" matInput required/>
+                    </mat-form-field>&nbsp; &nbsp;
+
+                    <mat-form-field class="full-width" >
+                        <mat-label>Last Name</mat-label>
+                        <input [(ngModel)]="data.lName"  name="lname" matInput required/>
+                    </mat-form-field><br><br><br>
+
+                    <mat-form-field class="full-width" >
+                        <mat-label>Password</mat-label>
+                        <input [(ngModel)]="data.pwd" type="password" name="pwd" matInput required/>
+                    </mat-form-field>&nbsp;&nbsp;
+
+                    <mat-form-field class="full-width" >
+                        <mat-label>Confirm Password</mat-label>
+                        <input [(ngModel)]="data.cpwd" type="password" name="cpwd" matInput required/>
+                    </mat-form-field><br><br><br>
+
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary">Register</button>&nbsp; &nbsp;       
+                    </div>
+
+                </form>
+
+
+                
+                <!-- {{data | json}} -->
+
+              
+            </div>
+        </div>
+    </div>
+</div>

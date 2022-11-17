@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+<span><a mat-icon-button routerLink="/" style="font-size: larger; ">PRODUCT CATALOGUE &nbsp;</a>
+<h6>{{Today | date}}</h6>
+</span>
+
+<span class="nav"><h1 class="text-center" style="color: rgb(211, 211, 230);"><b>Welcome to Product Catalogue</b></h1></span>
+
+<a *ngIf="!loggedIn" mat-icon-button routerLink="/login" style="font-size: medium; ">LOGIN</a>
+<a  mat-icon-button  style="font-size: medium; margin-right: 40px;" *ngIf="loggedIn">{{user}}</a>&nbsp;
+<a *ngIf="loggedIn" (click)="logoutUser()" style="font-size: medium;" mat-icon-button>Logout</a>
+
+</mat-toolbar>

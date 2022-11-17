@@ -1,0 +1,29 @@
+
+
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="20%" fxLayoutAlign=" stretch" *ngFor="let e of list | brand: 'brand' : brand; ">
+<mat-card class="mat-elevation-z4">
+            <mat-card-header >
+                <mat-card-title>{{e.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image width="200" src="{{e.image}}">
+            <mat-card-content>
+                <p style="font-size: large;font-style: italic;color: rgb(138, 5, 5);">
+                    {{e.brand}}
+                </p><p style="font-size: medium;text-align: center;">
+                 <b>  Price:{{e.price}}</b>
+                </p>
+            </mat-card-content>
+            <mat-card-actions class="text-center">
+                <button mat-button color="accent"><a href="/productDetails/?code={{e.code}}">View Details</a></button>
+            </mat-card-actions>
+        </mat-card>
+        </div>
+
+
+    </div>
+
+    
+    
+</div>

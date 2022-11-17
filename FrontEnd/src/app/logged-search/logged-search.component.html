@@ -1,0 +1,58 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+        <span fxLayout="row wrap" >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="text-center" style="color: rgb(90, 63, 6);">Search Result</h1>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Section style="text-align: right;">
+            <mat-button-toggle-group  (change)="onValChange($event.value)">
+                <mat-button-toggle value="Nike">Nike</mat-button-toggle>
+                <mat-button-toggle value="Uspolo">Uspolo</mat-button-toggle>
+                <mat-button-toggle value="Adidas">Adidas</mat-button-toggle>
+              </mat-button-toggle-group>     
+        
+      
+        
+        <form (ngSubmit)="onSubmit()">
+            <mat-form-field class="example-full-width" appearance="outline" >
+                <mat-label>Min Price</mat-label>
+                <input [(ngModel)]="price.min" name="min" matInput placeholder="Ex. 100">
+              </mat-form-field>
+              <mat-form-field class="example-full-width" appearance="outline" >
+                <mat-label>Max Price</mat-label>
+                <input [(ngModel)]="price.max" name="max" matInput placeholder="Ex. 10000">
+              </mat-form-field>&nbsp;&nbsp;
+              <button type="submit" mat-flat-button color="warn">Filter</button>
+        </form></Section></span>
+    </div>
+</div>
+
+
+
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+       
+        <div  fxFlex="20%" fxLayoutAlign=" stretch" *ngFor="let e of list;">
+<mat-card class="mat-elevation-z4">
+            <mat-card-header >
+                <mat-card-title>{{e.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image width="200" src="{{e.image}}">
+            <mat-card-content>
+                <p style="font-size: large;font-style: italic;color: rgb(138, 5, 5);">
+                    {{e.brand}}
+                </p><p style="font-size: medium;text-align: center;">
+                 <b>  Price:{{e.price}}</b>
+                </p>
+            </mat-card-content>
+            <mat-card-actions class="text-center">
+                <button mat-button color="accent"><a href="/productDetails/?code={{e.code}}">View Details</a></button>
+            </mat-card-actions>
+        </mat-card>
+        </div>
+        
+
+    </div>
+
+    
+</div>
